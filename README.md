@@ -18,13 +18,13 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 
 This template supports all major OS (macOS, Linux, Windows).
 
-### Create your repository
+### Create your repository 📝
 
 1.  Open [the template repository](https://github.com/fspoettel/advent-of-code-rust) on Github.
-2.  Click `Use this template` and create your repository.
+2.  Click [Use this template](https://github.com/fspoettel/advent-of-code-rust/generate) and create your repository.
 3.  Clone your repository to your computer.
 
-### Setup rust
+### Setup rust 💻
 
 1.  Install the [Rust toolchain](https://www.rust-lang.org/tools/install).
 2.  (recommended) Install the [rust-analyzer](https://rust-analyzer.github.io/manual.html) extension for your code editor.
@@ -47,19 +47,19 @@ cargo scaffold <day>
 # Created empty input file "src/inputs/01.txt"
 # Created empty example file "src/examples/01.txt"
 # ---
-# 🎄 Type `cargo day 01` to run your solution.
+# 🎄 Type `cargo solve 01` to run your solution.
 ```
 
 Individual solutions live in the `./src/bin/` directory as separate binaries.
 
-Every [solution](https://github.com/fspoettel/advent-of-code-rust/blob/master/src/bin/scaffold.rs#L7-L35) has _unit tests_ referencing its _example_ file. Use these unit tests to develop and debug your solution against example inputs. For some puzzles, it might be easier to forgo the example file and hardcode inputs into the tests.
+Every [solution](https://github.com/fspoettel/advent-of-code-rust/blob/main/src/bin/scaffold.rs#L11-L41) has _unit tests_ referencing its _example_ file. Use these unit tests to develop and debug your solution against the example input. For some puzzles, it might be easier to forgo the example file and hardcode inputs into the tests.
 
 When editing a solution, `rust-analyzer` will display buttons for running / debugging unit tests above the unit test blocks.
 
 ### Download input for a day
 
 > **Note**  
-> This command requires [installing the aoc-cli crate](#download-inputs-via-aoc-cli).
+> This command requires [installing the aoc-cli crate](#download-puzzle-inputs-via-aoc-cli).
 
 ```sh
 # example: `cargo download 1`
@@ -106,7 +106,7 @@ Displayed _timings_ show the raw execution time of your solution without overhea
 cargo all
 
 # output:
-#     Running `target/release/aoc`
+#     Running `target/release/advent_of_code`
 # ----------
 # | Day 01 |
 # ----------
@@ -125,7 +125,7 @@ cargo all
 
 _Total timing_ is computed from individual solution _timings_ and excludes as much overhead as possible.
 
-### Run all solutions against example input
+### Run all solutions against the example input
 
 ```sh
 cargo test
@@ -147,19 +147,16 @@ cargo clippy
 
 ### Download puzzle inputs via aoc-cli
 
-1. Install [`aoc-cli`](https://github.com/scarvalhojr/aoc-cli/) via cargo: `cargo install aoc-cli`.
-2. Create an `.adventofcode.session` file in your home directory and paste your session cookie into it. To get this, press F12 anywhere on the Advent of Code website to open your browser developer tools. Look in your Cookies under the Application or Storage tab, and copy out the `session` cookie value.
+1. Install [`aoc-cli`](https://github.com/scarvalhojr/aoc-cli/) via cargo: `cargo install aoc-cli --version 0.5.0`.
+2. Create an `.adventofcode.session` file in your home directory and paste your session cookie[^1] into it. To get this, press F12 anywhere on the Advent of Code website to open your browser developer tools. Look in your Cookies under the Application or Storage tab, and copy out the `session` cookie value.
 
-Once installed, you can use the [download command](#download-inputs-for-a-day).
-
-> **Note**  
-> The session cookie might expire after a while (~1 month) which causes the downloads to fail. To fix this issue, refresh the `.adventofcode.session` file.
+Once installed, you can use the [download command](#download-input-for-a-day).
 
 ### Enable clippy lints in CI
 
 Uncomment the `clippy` job in the `ci.yml` workflow to enable clippy checks in CI.
 
-### Automatically track ⭐️ progress in readme
+### Automatically track ⭐️ progress in the readme
 
 This template includes [a Github action](https://github.com/k2bd/advent-readme-stars) that automatically updates the readme with your advent of code progress.
 

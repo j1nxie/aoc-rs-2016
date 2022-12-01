@@ -131,9 +131,9 @@ pub fn part_two(input: &str) -> Option<i32> {
 }
 
 fn main() {
-    let input = &aoc::read_file("inputs", 1);
-    aoc::solve!(1, part_one, input);
-    aoc::solve!(2, part_two, input);
+    let input = &advent_of_code::read_file("inputs", 1);
+    advent_of_code::solve!(1, part_one, input);
+    advent_of_code::solve!(2, part_two, input);
 }
 
 #[cfg(test)]
@@ -142,13 +142,13 @@ mod tests {
 
     #[test]
     fn test_part_one() {
-        let input = aoc::read_file("examples", 1);
+        let input = advent_of_code::read_file("examples", 1);
         assert_eq!(part_one(&input), Some(8));
     }
 
     #[test]
     fn test_part_two() {
-        let input = aoc::read_file("examples", 1);
+        let input = advent_of_code::read_file("examples", 1);
         assert_eq!(part_two(&input), Some(4));
     }
 }
